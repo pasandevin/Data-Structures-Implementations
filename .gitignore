@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#MacOS files
+*.DS_Store
+
+#VsCode configuration files
+*.vscode
