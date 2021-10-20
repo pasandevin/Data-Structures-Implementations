@@ -1,3 +1,7 @@
+// Dynamic implementation using linked lists
+#ifndef DYNAMIC_IMPLEMENTATION
+#define DYNAMIC_IMPLEMENTATION
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -73,28 +77,4 @@ void Remove(Queue *Q, queueEntryType *item) {
     Q->no_of_elements--;
 }
 
-
-
-int main() {
-    Queue Q;
-    char c;  
-    createQueue(&Q);
-
-    char msg[] = "Hello World";
-    printf("The String to insert\t: %s", msg);
-
-    for (int i = 0; msg[i] != '\0'; i++) {
-        Insert(&Q, msg[i]);
-    }
-
-    printf("\n\n");
-    printf("The String from Queue\t: ");
-
-    while (!isQueueEmpty(&Q))
-    {
-        Remove(&Q, &c);
-        putchar(c);
-    }
-   
-    return 0;
-}
+#endif
