@@ -1,3 +1,4 @@
+// Contigous implementation using arrays
 #ifndef CONTIGUOUS_IMPLEMENTATION
 #define CONTIGUOUS_IMPLEMENTATION
 
@@ -9,6 +10,11 @@
 
 
 typedef char stackEntryType;
+
+typedef enum {
+    FALSE,
+    TRUE
+}Boolean;
 
 typedef struct Stack
 {
@@ -23,11 +29,11 @@ void createStack(Stack *S) {
     S->top = -1;
 }
 
-int isStackEmpty(Stack *S) {
+Boolean isStackEmpty(Stack *S) {
     return S->top == -1;
 }
 
-int isStackFull(Stack *S) {
+Boolean isStackFull(Stack *S) {
     return S->top == MAXSTACKSIZE - 1;
 }
 
@@ -48,6 +54,5 @@ void pop(Stack *S, stackEntryType *item) {
     *item = S->data[S->top--];
     S->no_of_elements--;
 }
-
 
 #endif
