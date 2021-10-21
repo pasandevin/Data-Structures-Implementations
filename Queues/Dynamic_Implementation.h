@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 typedef char queueEntryType;
 
 typedef enum {
@@ -67,12 +68,15 @@ void Remove(Queue *Q, queueEntryType *item) {
         printf("Queue is empty");
         exit(1);
     }
+
     *item = Q->front->item;
     Node *np = Q->front;
     Q->front = Q->front->next;
+
     if (Q->front == NULL) {
         Q->rear = NULL;
     }
+
     free(np);
     Q->no_of_elements--;
 }
