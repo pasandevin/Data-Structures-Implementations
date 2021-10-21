@@ -56,3 +56,6 @@ dkms.conf
 
 #VsCode configuration files
 *.vscode
+
+#Object file of Main programs
+Main

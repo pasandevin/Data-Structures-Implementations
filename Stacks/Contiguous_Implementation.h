@@ -8,7 +8,6 @@
 #define MAXSTACKSIZE 20
 
 
-
 typedef char stackEntryType;
 
 typedef enum {
@@ -22,7 +21,6 @@ typedef struct Stack
     int no_of_elements;
     stackEntryType data[MAXSTACKSIZE];
 }Stack;
-
 
 
 void createStack(Stack *S) {

@@ -6,7 +6,6 @@
 #include <stdlib.h>
 
 
-
 typedef char stackEntryType;
 
 typedef enum {
@@ -23,7 +22,6 @@ typedef struct stack {
     Node *top;
     int no_of_elements;
 }Stack;
-
 
 
 void createStack(Stack *S) {

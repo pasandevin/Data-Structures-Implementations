@@ -8,7 +8,6 @@
 #define MAXQUEUESIZE 50
 
 
-
 typedef char queueEntryType;
 
 typedef enum {
@@ -22,7 +21,6 @@ typedef struct queue{
     int no_of_elements;
     queueEntryType items[MAXQUEUESIZE];
 }Queue;
-
 
 
 void createQueue(Queue *Q) {

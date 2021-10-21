@@ -3,12 +3,10 @@
 #define CIRCULAR_IMPLEMENTATION
 
 
-
 #include <stdio.h>
 #include <stdlib.h>
 
 #define MAXQUEUESIZE 17
-
 
 
 typedef char queueEntryType;
@@ -24,7 +22,6 @@ typedef struct queue{
     int no_of_elements;
     queueEntryType items[MAXQUEUESIZE];
 }Queue;
-
 
 
 void createQueue(Queue *Q) {
