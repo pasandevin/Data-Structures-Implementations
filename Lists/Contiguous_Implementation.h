@@ -1,3 +1,7 @@
+// Contiguous implementation using arrays
+#ifndef CONTIGUOUS_IMPLEMENTATION
+#define CONTIGUOUS_IMPLEMENTATION
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -98,31 +102,10 @@ void displayList(List *L) {
         printf("List is Empty");
         exit(1);
     }
-    printf("List Elements\t:");
+    printf("\nList Elements\t:");
     for (int temp_pos = 0; temp_pos <= listSize(L); temp_pos++) {
         printf("%5d",L->items[temp_pos]);
     }
 }
 
-
-int main() {
-    List L;
-    listEntryType item;
-
-    createList(&L);
-    insertLast(&L,1);
-    insertLast(&L,2);
-    insertLast(&L,3);
-    insertLast(&L,4);
-    insertLast(&L,5);
-    insertList(4,&L,22);
-    replaceList(2,&L,50);
-    deleteList(4,&L,&item);
-    printf("Deleted Element\t:%5d\n",item);
-    retrieveList(5,&L,&item);
-    printf("The element at 5th location\t:%5d\n",item);
-    displayList(&L);
-
-    return 0;
-}
-
+#endif
